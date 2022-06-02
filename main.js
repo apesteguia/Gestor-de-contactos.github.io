@@ -12,10 +12,16 @@ boton.addEventListener("click", (e) => {
         alert("Campos vacios o incorrectos!");
         return;
     }
+    let a = parseInt(telefono.value);
+    if (!Number.isInteger(a)) {
+        alert("Telefono Incorrecto!");
+        telefono.value= "";
+        return;
+    }
     const datos = [nombre.value, apellido.value, telefono.value];
     const li = document.createElement("li");
     const p = document.createElement("p");
-    p.textContent = "    "+nombre.value+"    "+apellido.value+"  :    "+telefono.value;
+    p.textContent = "    "+nombre.value+"    "+apellido.value+"  Tlf:    "+telefono.value;
     li.appendChild(añadirBoton());
     li.appendChild(p);
     ul.appendChild(li);

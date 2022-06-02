@@ -11,15 +11,15 @@
         <form class="formulario">
            <h1 class="formulario_titulo">Gestor De contactos</h1> 
            <label class="formulario_label">Nombre</label>
-           <input type="text" id="nombre" name="nombre" class="formulario_input">
+           <input type="text" maxlength="15" id="nombre" name="nombre" class="formulario_input">
            
            <label class="formulario_label">Apellido</label>
-           <input type="text" id="apellido" class="formulario_input">
+           <input type="text" maxlength="15" id="apellido" class="formulario_input">
            
            <label class="formulario_label">Telefono</label>
-           <input type="text" id="telefono" class="formulario_input">
+           <input type="text" maxlength="15" id="telefono" class="formulario_input">
            
-           <button class="formulario_submit" id="button" >Crear Contacto</button>
+           <button class="formulario_submit" id="button" ><span>Crear Contacto</span></button>
         </form> 
         <div class="contactos" id="div">
            <h1 class="contactos_texto">Contactos</h1> 
@@ -29,6 +29,8 @@
     </body>
     <script src="main.js"></script>
     <div class="foot">
-    <footer>Mikel Apesteguia  2022</footer>
+        <a href="https://github.com/apesteguia/Gestor-de-contactos.github.io">
+    <button class="btn_foot" id="footer"><span>Mikel Apesteguia 2022</span></button>
+    </a>
     </div>
 </html>
