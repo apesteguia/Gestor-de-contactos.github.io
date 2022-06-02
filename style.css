@@ -1,20 +1,25 @@
 html {
     height: 100%;
+    box-sizing: border-box;
+    width: 100%;
 }
 body {
     font-family: sans-serif;
     color: white;
     background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    background-repeat: no - repeat;
+    background-attachment: fixed;
 }
 .formulario {
     width: 500px;
-    max-width: 100%;
     margin: auto;
     background-color: #262729;
     margin-top: 30px;
     padding: 20px;
     box-shadow: 0 0 20px 1px rgba(0,0,0,0.75);
     border-radius: 10px;
+    max-width: 70%;
+    max-height: 100%;
 }
 .formulario_titulo {
     text-align: center;
@@ -47,6 +52,7 @@ body {
 .formulario_submit {
     background-image: linear-gradient(to right top, #004d7a, #008793, #00bf72);
     color: white;
+    transition: .3s ease;
     padding: 10px 20px;
     width: 100%;
     cursor: pointer;
@@ -55,6 +61,16 @@ body {
     text-align: center;
     font-size: 1.2em;
     
+}
+.formulario_submit::after {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top:0;
+    left: calc(-100% - 80px);
+    border-bottom: 80px solid  #262729;
+    border-right: 80px solid transparent;
+    transition: .4s ease-in-out;
 }
 .formulario_label {
     margin-bottom: 10px;
@@ -66,16 +82,73 @@ body {
     background-color: #262729;
     margin-top: 30px;
     padding: 20px;
+    max-width: 70%;
     box-shadow: 0 0 20px 1px rgba(0,0,0,0.75);
     border-radius: 10px;
     text-align: center;
+    max-height: 100%;
     font-size: 1.2em;
 }
 .contactos_texto {
     text-align: center; 
     margin-top: 0;
 }
-.contactos_campos {
-    display: inline;
-    margin: 9%;
+
+.datos {
+    width: 550px;
+    max-width: 100%;
+    margin: auto;
+    background-color: #3b3c3f;
+    margin-top: 30px;
+    padding: 20px;
+    max-width: 70%;
+    border: 1px solid #00bf72;
+    border-radius: 10px;
+    text-align: center;
+    max-height: 100%;
+    font-size: 1.2em;
+    text-align: center;
+}
+.datos_ul {
+    font-size: 0.9em;
+}
+li {
+    list-style: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    background-color: #3b3c3f;
+}
+li p {
+    margin: 0px;
+    padding: 15px;
+    width: 100%;
+}
+.btn_delete {
+    background-image: linear-gradient(to right top, #004d7a, #008793, #00bf72);
+    color: white;
+    cursor: pointer;
+    border: 1px solid #0b9;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.0em;
+    width: 10%;
+}
+ul {
+    margin-right: 30px;
+}
+.foot {
+    width: 350px;
+    max-width: 100%;
+    margin: auto;
+    background-color: #262729;
+    margin-top: 30px;
+    padding: 20px;
+    max-width: 70%;
+    border-radius: 10px;
+    text-align: center;
+    max-height: 100%;
+    font-size: 1.1em;
+    text-align: center;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.75);
 }
